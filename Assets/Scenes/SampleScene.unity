@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 1039040266}
   - component: {fileID: 1039040265}
   - component: {fileID: 1039040264}
+  - component: {fileID: 1039040270}
   m_Layer: 0
   m_Name: PlayerBall
   m_TagString: Player
@@ -595,6 +596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BallController
   torqueStrength: 20
   maxAngularVelocity: 30
+  maxLinearSpeed: 10
   massIndependent: 1
 --- !u!54 &1039040265
 Rigidbody:
@@ -716,6 +718,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1039040270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039040263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7eeb548bbf61e48b5b82c5185c933d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BallMaterialController
+  sponge: {fileID: 11400000, guid: 8eff90e39d1261f449427d7cf9179703, type: 2}
+  metal: {fileID: 11400000, guid: c15b8ebfe23ed0f4da848692e1a8fd99, type: 2}
+  glass: {fileID: 11400000, guid: 96ca3619093a47149a529b88fc947780, type: 2}
+  startMaterial: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

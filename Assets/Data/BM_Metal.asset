@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb8f3a6efa8c8e4daac542425121486, type: 3}
+  m_Name: BM_Metal
+  m_EditorClassIdentifier: Assembly-CSharp::BallMaterialData
+  type: 1
+  mass: 8
+  physicsMaterial: {fileID: 13400000, guid: 74e47866f1d15054098de9b21c7630fb, type: 2}
+  angularDamping: 1
+  linearDamping: 0.1
+  torqueStrength: 12
+  maxAngularVelocity: 25
+  maxLinearSpeed: 6
+  visualMaterial: {fileID: 2100000, guid: 3708419c433b1f54a94cf257c1d75378, type: 2}
