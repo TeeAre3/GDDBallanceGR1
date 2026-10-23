@@ -50,9 +50,12 @@ public class BallMaterialController : MonoBehaviour
         initialised = true;
 
         rb.mass = data.mass;
+        rb.angularDamping = data.angularDamping;
+        rb.linearDamping = data.linearDamping;
+
         if (data.physicsMaterial != null) col.sharedMaterial = data.physicsMaterial;
         if (data.visualMaterial != null && rend != null) rend.sharedMaterial = data.visualMaterial;
-        controller.ApplyMaterial(data.torqueStrength, data.maxAngularVelocity);
+        controller.ApplyMaterial(data.torqueStrength, data.maxAngularVelocity, data.maxLinearSpeed);
 
         OnMaterialChanged?.Invoke(type);
     }

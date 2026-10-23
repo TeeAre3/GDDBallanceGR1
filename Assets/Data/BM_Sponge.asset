@@ -15,6 +15,9 @@ MonoBehaviour:
   type: 0
   mass: 0.5
   physicsMaterial: {fileID: 13400000, guid: 1c40c865782fd464790138fd98d1165c, type: 2}
-  torqueStrength: 20
+  angularDamping: 0.5
+  linearDamping: 0
+  torqueStrength: 35
   maxAngularVelocity: 30
+  maxLinearSpeed: 10
   visualMaterial: {fileID: 2100000, guid: 2913d9c78e38ad34b9f9e6aff884bf4e, type: 2}
