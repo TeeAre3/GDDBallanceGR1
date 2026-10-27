@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class Burner : MonoBehaviour
 {
-    [Header("Nagrzewanie metalu")]
-    [Tooltip("Ile temperatury (0-1) kula zyskuje na sekundê w p³omienu")]
+    [Header("Metal heating")]
+    [Tooltip("How much temperature (0-1) the ball gains per second inside the flame")]
     [SerializeField] float heatRate = 0.5f;
 
-    [Header("Cykl pracy (opcjonalnie)")]
-    [Tooltip("0 = palnik p³onie ca³y czas")]
+    [Header("Duty cycle (optional)")]
+    [Tooltip("0 = the burner stays on all the time")]
     [SerializeField] float onTime = 0f;
     [SerializeField] float offTime = 2f;
 
-    [Header("Wygl¹d")]
+    [Header("Visuals")]
     [SerializeField] ParticleSystem flame;
 
     Collider zone;

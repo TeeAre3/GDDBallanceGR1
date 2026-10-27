@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class IceWall : MonoBehaviour
 {
-    [Tooltip("Minimalna temperatura kuli, ¿eby lód zacz¹³ siê topiæ (0-1)")]
+    [Tooltip("Minimum ball temperature required for the ice to start melting (0-1)")]
     [SerializeField, Range(0f, 1f)] float minTemperature = 0.4f;
-    [Tooltip("Ile sekund w kontakcie z gor¹c¹ kul¹ trwa pe³ne stopienie")]
+    [Tooltip("Seconds of contact with a hot ball needed to melt completely")]
     [SerializeField] float meltTime = 2f;
 
     Vector3 startScale;

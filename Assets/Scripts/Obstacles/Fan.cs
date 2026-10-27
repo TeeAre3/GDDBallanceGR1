@@ -2,16 +2,16 @@
 
 public class Fan : MonoBehaviour
 {
-    [Header("Moc")]
-    [Tooltip("Przyspieszenie nadawane kuli w m/s². Żeby kula się wznosiła, musi być większe niż 9.81")]
+    [Header("Power")]
+    [Tooltip("Acceleration applied to the ball in m/s². To lift the ball it must be greater than 9.81")]
     [SerializeField] float power = 16f;
 
-    [Tooltip("Włącz, jeśli siła ma słabnąć z odległością od wiatraka")]
+    [Tooltip("Enable if the force should weaken with distance from the fan")]
     [SerializeField] bool useFalloff = false;
-    [Tooltip("Zasięg liczony dla falloff (powinien odpowiadać długości collidera w osi Z)")]
+    [Tooltip("Range used for falloff (should match the collider length along the Z axis)")]
     [SerializeField] float range = 6f;
 
-    [Header("Wygląd (opcjonalnie)")]
+    [Header("Visuals (optional)")]
     [SerializeField] Transform blades;
     [SerializeField] Vector3 spinAxis = Vector3.forward;
     [SerializeField] float spinSpeed = 720f;
