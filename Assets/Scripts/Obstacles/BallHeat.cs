@@ -6,11 +6,11 @@ public class BallHeat : MonoBehaviour
 {
     [Range(0f, 1f)] public float temperature = 0f;
 
-    [Header("Ch³odzenie")]
-    [Tooltip("Ile temperatury (0-1) ubywa na sekundê. 0.1 = 10 s od pe³nego ¿aru do zimnej")]
+    [Header("Cooling")]
+    [Tooltip("How much temperature (0-1) is lost per second. 0.1 = 10 s from full glow to cold")]
     [SerializeField] float coolRate = 0.1f;
 
-    [Header("Wygl¹d")]
+    [Header("Visuals")]
     [SerializeField] Color hotColor = new Color(1f, 0.3f, 0.05f);
     [SerializeField] float emissionIntensity = 2f;
 

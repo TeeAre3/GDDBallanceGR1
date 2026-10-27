@@ -22,7 +22,7 @@ public static class PlayerDeath
         public IEnumerator Run(float delay)
         {
             GameSession.Lives--;
-            Debug.Log($"Pozosta³e ¿ycie: {GameSession.Lives}");
+            Debug.Log($"Lives left: {GameSession.Lives}");
 
             yield return new WaitForSeconds(delay);
 
