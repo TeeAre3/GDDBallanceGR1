@@ -1,6 +1,3 @@
-using System;
-using System.Net.Http.Headers;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(BallMaterialController))]
@@ -15,10 +12,14 @@ public class WaterCarrier : MonoBehaviour
     public Color dryTint = new(1f, 1f, 0f);
     public Color wetTint = new(0.4f, 0.4f, 0f);
 
-    public event Action<float> OnWaterChanged;
+    [Header("Wet handling (1 = no change, lower = slower when full of water)")]
+    [Range(0.1f, 1f)] public float wetAcceleration = 0.5f;
+    [Range(0.1f, 1f)] public float wetTopSpeed = 0.6f;
+
 
     private Rigidbody rb;
     private BallMaterialController ball;
+    private BallController controller;
     private Renderer rend;
     private MaterialPropertyBlock block;
     private float baseMass;
@@ -32,7 +33,8 @@ public class WaterCarrier : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         ball = GetComponent<BallMaterialController>();
-        rend = GetComponent<Renderer>();
+        controller = GetComponent<BallController>();
+        rend = GetComponentInChildren<Renderer>();
         block = new MaterialPropertyBlock();
 
         rb.sleepThreshold = 0f;
@@ -51,6 +53,9 @@ public class WaterCarrier : MonoBehaviour
         {
             water = 0f;
             if (rend != null) rend.SetPropertyBlock(null);
+            controller.torqueMultiplier = 1f;
+            controller.speedMultiplier = 1f;
+            
         }
         Refresh();
     }
@@ -84,6 +89,8 @@ public class WaterCarrier : MonoBehaviour
         if(IsSponge)
         {
             rb.mass = baseMass + extraMassWhenWet * water;
+            controller.torqueMultiplier = Mathf.Lerp(1f, wetAcceleration, water);
+            controller.speedMultiplier = Mathf.Lerp(1f, wetTopSpeed, water);
 
             if(rend != null)
             {

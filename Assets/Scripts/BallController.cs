@@ -10,6 +10,10 @@ public class BallController : MonoBehaviour
     [Tooltip("true = same handling whatever the mass. false = heavy/wet ball accelerates slower.")]
     public bool massIndependent = true;
 
+    [Header("Modifiers (set by other systems)")]
+    public float torqueMultiplier = 1f;
+    public float speedMultiplier= 1f;
+
     private Rigidbody rb;
     private Vector2 input;
 
@@ -39,7 +43,7 @@ public class BallController : MonoBehaviour
         if (rb.isKinematic) return; 
 
         Vector3 torque = new Vector3(input.y, 0f, -input.x);
-        rb.AddTorque(torque * torqueStrength,
+        rb.AddTorque(torque * torqueStrength * torqueMultiplier,
                      massIndependent ? ForceMode.Acceleration : ForceMode.Force);
 
         ClampHorizontalSpeed();
@@ -49,9 +53,10 @@ public class BallController : MonoBehaviour
     {
         Vector3 v = rb.linearVelocity;
         Vector3 flat = new Vector3(v.x, 0f, v.z);
-        if (flat.magnitude <= maxLinearSpeed) return;
+        float limit = maxLinearSpeed * speedMultiplier;
+        if (flat.magnitude <= limit) return;
 
-        flat = flat.normalized * maxLinearSpeed;
+        flat = flat.normalized * limit;
         Vector3 clamped = new Vector3(flat.x, v.y, flat.z);
         rb.linearVelocity = clamped;
     }
