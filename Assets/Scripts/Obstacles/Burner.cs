@@ -1,4 +1,3 @@
-using System.Reflection.Metadata.Ecma335;
 using UnityEngine;
 
 public class Burner : MonoBehaviour

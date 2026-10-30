@@ -1,4 +1,3 @@
-using Unity.ProjectAuditor.Editor.Core;
 using UnityEngine;
 
 [RequireComponent(typeof(BallMaterialController))]

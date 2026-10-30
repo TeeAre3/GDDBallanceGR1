@@ -637,7 +637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903645797875830398, guid: e9a05fe7c19ce624a942da86914e66e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.21
+      value: -19.251
       objectReference: {fileID: 0}
     - target: {fileID: 8903645797875830398, guid: e9a05fe7c19ce624a942da86914e66e8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3210,7 +3210,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!135 &1039040266
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4236,15 +4236,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4875677111620707516, guid: 2c2922becd3e6594691ecc033c250c57, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.25
+      value: -20.27
       objectReference: {fileID: 0}
     - target: {fileID: 4875677111620707516, guid: 2c2922becd3e6594691ecc033c250c57, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.08
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 4875677111620707516, guid: 2c2922becd3e6594691ecc033c250c57, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 53.885563
+      value: 56.19
       objectReference: {fileID: 0}
     - target: {fileID: 4875677111620707516, guid: 2c2922becd3e6594691ecc033c250c57, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4300,7 +4300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7609147958362007534, guid: 2c2922becd3e6594691ecc033c250c57, type: 3}
       propertyPath: raisedPositionOffset.y
-      value: 0
+      value: 1.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4918,7 +4918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903645797875830398, guid: e9a05fe7c19ce624a942da86914e66e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.21
+      value: -21.25
       objectReference: {fileID: 0}
     - target: {fileID: 8903645797875830398, guid: e9a05fe7c19ce624a942da86914e66e8, type: 3}
       propertyPath: m_LocalPosition.y
